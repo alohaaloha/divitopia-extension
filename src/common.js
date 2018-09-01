@@ -31,7 +31,7 @@ var defaultCurrencies = mainCurrencies;
 /**
  * Divitopia Website
  */
-const divitopiaURL = 'https://divitopia.diviproject.org';
+const divitopiaURL = 'http://142.93.138.215:8001';
 
 var currencySelectors = {};
 
@@ -43,12 +43,26 @@ var currencySelectors = {};
  * have to parse it prior to using it
  */
 function fetchPrices() {
-	get(divitopiaURL + '/info/fiat', (json) => {
-		data.fiat = json;
+	get(divitopiaURL + "/info/fiat.json", (json) => {
+		data.fiat = json.rates;
 	});
-	get(divitopiaURL + '/info/crypto', (json) => {
-		data.crypto = json;
+	get(divitopiaURL + "/info/crypto.json", (json) => {
+		data.crypto = parseCoinmarketcapV2Data(json.data);
 	});
+}
+
+/**
+ * makes map of fetched data for easy accessing
+ * key: crypto symbol
+ * value: fetched crypto data
+ * 
+ */
+function parseCoinmarketcapV2Data(data){
+	let crypto = {};
+	for(let c of data){
+		crypto[c.symbol]=c;
+	}
+	return crypto;
 }
 
 /**

@@ -250,7 +250,8 @@ function openTooltip(price, x, y, forceOpen, activeCurrencies, crypto) {
 	// we need to make sure we have currency data
 	if (null === data || !data.crypto || !data.crypto[crypto]) return;
 
-	price *= data.crypto[crypto].price_usd;
+	//calculate price of crypto in USD ( will be used to convert to other fiat)
+	price *= data.crypto[crypto].quotes.USD.price;
 
 	var html = '';
 
@@ -258,11 +259,11 @@ function openTooltip(price, x, y, forceOpen, activeCurrencies, crypto) {
 	mainCurrencies.forEach((c) => {
 		// append currency to tooltip
 		html += '<b>' + c + '</b>: ' +
-				data.fiat[c].symbol + ' ' +
+				//api is missing symbols -> data.fiat[c].symbol + ' ' +
 				(new Intl.NumberFormat('en-CA', {
 					maximumFractionDigits: 2,
 					minimumFractionDigits: 2
-				}).format(price * data.fiat[c].usd)) +
+				}).format(price * data.fiat[c])) +
 			'<br />'
 		;
 	});

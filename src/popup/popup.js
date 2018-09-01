@@ -97,7 +97,8 @@ function render() {
 	// loop through our available currencies
 	currencies.forEach((c) => {
 		// add this currency as a menu item
-		addItem(data.fiat[c].name + ' (' + c + ')', handleConvert, (e) => {
+		// api is missing full fiat name
+		addItem("Convert to "  + c , handleConvert, (e) => {
 			e.setAttribute('data-currency', c);
 			if (mainCurrencies.indexOf(c) > -1)
 				e.classList.add('active');
