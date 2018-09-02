@@ -254,6 +254,7 @@ function openTooltip(price, x, y, forceOpen, activeCurrencies, crypto) {
 	price *= data.crypto[crypto].quotes.USD.price;
 
 	var html = '';
+	//html+="<h6>-"+crypto+"-</h6>";//for debbug
 
 	// loop through our acceptable currencies,
 	mainCurrencies.forEach((c) => {

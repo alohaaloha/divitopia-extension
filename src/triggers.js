@@ -98,3 +98,17 @@ triggerFunctions.binanceAdvanced = (e) => {
 	}
 	return {};
 }
+
+/**
+ * Simex basic exchange currency detection
+ *
+ * @param {Element} e
+ */
+triggerFunctions.simexBasic = (e) => {
+	try {
+		return {
+			curr : document.querySelector('.col-md-push-8 .list-group-item .col-sm-8 .nav .active a').innerText.split('/')[0].trim()
+		}
+	} catch (e) {}
+	return {};
+}

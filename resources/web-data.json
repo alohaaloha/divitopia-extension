@@ -194,5 +194,20 @@
 			"tbody#my_orders_1 tr td:nth-child(5)",
 			"tbody#my_orders_1 tr td:nth-child(6)"
 		]
+	},
+	{
+		"urls": [
+			"^https?:\\/\\/(\\w+\\.)?simex\\.global\\/"
+		],
+		"currency": "BTC",
+		"selectors": [
+			".col-md-pull-4 .row .panel table tbody tr td:nth-child(1)",
+			".col-md-pull-4 .row .panel table tbody tr td:nth-child(3)"
+		],
+		"specialTriggers": {
+			"simexBasic": [
+				".col-md-push-8 table tbody tr td:nth-child(2)"
+			]
+		}
 	}
 ]
