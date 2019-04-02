@@ -387,10 +387,12 @@ function showTooltip(e) {
 	trigger = e;
 
 	// make sure the text is numerical, extract the first number selected
-	var price      = e.target.value || e.target.innerText,
-		priceParse = price.match(/([0-9.]+)/);
+	var price      = e.target.value || e.target.innerText;
+	price = price.replace(/\n/g, '');
+	let priceParse = price.match(/([0-9.]+)/);
+	
 	if (null == priceParse || null == priceParse[0] || "" == priceParse[0])
-		return;
+	return;
 
 	var defaults = {
 		price  : parseFloat(priceParse[0]),
