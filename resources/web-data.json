@@ -217,7 +217,8 @@
 		"currency": "BTC",
 		"selectors": [
 			"#root > div > div.wrapper > div > div > div.grid_item > div > div > div > section > div > div:nth-child(2) > div > div > div > div > div > span", 
-			"#root > div > div.wrapper > div > div > div.grid_item > div > div > div > section > form > div > div > div > span.pointer",
+			"#root > div > div.wrapper > div > div > div.grid_item:nth-child(4) > div > div > div > section > form > div > div > div > span.pointer",
+			"#root > div > div.wrapper > div > div > div.grid_item:nth-child(5) > div > div > div > section > form > div > div:nth-child(2) > div > span.pointer",
 			"#root > div > div.wrapper > div > div > div.grid_item > div > div > div > div > div > div:nth-child(1) > div > div > div > div > div:nth-child(3) > span",
 			"#root > div > div.wrapper > div > div > div.grid_item > div > div > div > div > div > div:nth-child(1) > div > div > div > div > div:nth-child(4) > span",
 			"#root > div > div.wrapper > div > div > div.grid_item > div > div > div > div > div:nth-child(1) > div > div > div > div > div:nth-child(2) > div > span"
