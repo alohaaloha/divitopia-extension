@@ -47,7 +47,7 @@ function fetchPrices() {
 		data.fiat = json.rates;
 	});
 	get(divitopiaURL + "/info/crypto.json", (json) => {
-		data.crypto = parseCoinmarketcapV2Data(json.data);
+		data.crypto = parseCoinmarketcapData(json.data);
 	});
 }
 
@@ -57,7 +57,7 @@ function fetchPrices() {
  * value: fetched crypto data
  * 
  */
-function parseCoinmarketcapV2Data(data){
+function parseCoinmarketcapData(data){
 	let crypto = {};
 	for(let c of data){
 		crypto[c.symbol]=c;

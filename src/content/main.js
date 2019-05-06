@@ -251,7 +251,7 @@ function openTooltip(price, x, y, forceOpen, activeCurrencies, crypto) {
 	if (null === data || !data.crypto || !data.crypto[crypto]) return;
 
 	// calculate price of crypto in USD ( will be used to convert to other fiat)
-	price *= data.crypto[crypto].quotes.USD.price;
+	price *= data.crypto[crypto].quote.USD.price;
 
 	var html = '';
 	//html+="<h6>-"+crypto+"-</h6>";//for debbug
