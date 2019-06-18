@@ -112,3 +112,17 @@ triggerFunctions.simexBasic = (e) => {
 	} catch (e) {}
 	return {};
 }
+
+/**
+ * Bitrue exchange currency detection
+ *
+ * @param {Element} e
+ */
+triggerFunctions.bitrueBasic = (e) => {
+	try {
+		return {
+			curr : document.querySelector('#root div.trade-title > ul > li.active').textContent.trim()
+		}
+	} catch (e) {}
+	return {};
+}

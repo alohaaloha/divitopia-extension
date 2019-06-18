@@ -541,6 +541,7 @@ function handleAlertTrigger(e) {
 					// add the class to the element
 					e.classList.add(tooltipId);
 
+					// add custom attribute to the element
 					e.setAttribute("divitopia-function", func);
 				});
 			});

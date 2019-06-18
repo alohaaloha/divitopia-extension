@@ -223,5 +223,24 @@
 			"#root > div > div.wrapper > div > div > div.grid_item > div > div > div > div > div > div:nth-child(1) > div > div > div > div > div:nth-child(4) > span",
 			"#root > div > div.wrapper > div > div > div.grid_item > div > div > div > div > div:nth-child(1) > div > div > div > div > div:nth-child(2) > div > span"
 		]
+	},
+	{
+		"urls": [
+			"^https?:\\/\\/(\\w+\\.)?bitrue\\.com\\/"
+		],
+		"currency": "BTC",
+		"selectors": [
+			".bid-ask-wrap .bid-ask-item span:nth-child(1)",
+			".bid-ask-wrap .bid-ask-item span:nth-child(3)",
+			".trade-history-wrap .trade-history-item span:nth-child(2)",
+			".ticker-last span",
+			".ticker-low span",
+			".ticker-high span"
+		],
+		"specialTriggers": {
+			"bitrueBasic": [
+				".market-lists .market-item span:nth-child(3)"
+			]
+		}
 	}
 ]
