@@ -247,6 +247,9 @@ function openTooltip(price, x, y, forceOpen, activeCurrencies, crypto) {
 		crypto = crypto || getWebsiteCurrency(window.location)
 	;
 
+	// debug
+	//console.log("converting " + crypto + " value")
+
 	// we need to make sure we have currency data
 	if (null === data || !data.crypto || !data.crypto[crypto]) return;
 
@@ -521,14 +524,16 @@ function handleAlertTrigger(e) {
 			return;
 
 		// find all elements matching our selectors and attach new class to it
-		document.querySelectorAll(selectors).forEach((e) => {
-			// ensure this element has not been marked yet
-			if (!e.classList || e.classList.contains(tooltipId))
-				return;
+		if(selectors.length!=0){
+			document.querySelectorAll(selectors).forEach((e) => {
+				// ensure this element has not been marked yet
+				if (!e.classList || e.classList.contains(tooltipId))
+					return;
 
-			// add the class to the element
-			e.classList.add(tooltipId);
-		});
+				// add the class to the element
+				e.classList.add(tooltipId);
+			});
+		}
 
 		// find all elements matching our special triggers selectors and attach new class to it
 		if (specialTriggers instanceof Array) {	

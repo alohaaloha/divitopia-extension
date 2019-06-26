@@ -126,3 +126,32 @@ triggerFunctions.bitrueBasic = (e) => {
 	} catch (e) {}
 	return {};
 }
+
+
+/**
+ * Bitrue exchange currency detection
+ *
+ * @param {Element} e
+ */
+triggerFunctions.bitrueAdvanced = (e) => {
+	try {
+		return {
+			curr : document.querySelector("#root div.trade-right div.bid-ask-lists-header > span:nth-child(1)").textContent.split("(")[1].replace(")", "").trim()
+		}
+	} catch (e) {}
+	return {};
+}
+
+/**
+ * Bitrue exchange currency detection
+ *
+ * @param {Element} e
+ */
+triggerFunctions.bitrueAdvanced2 = (e) => {
+	try {
+		return {
+			curr : document.querySelector("#root div.trade-right div.bid-ask-lists-header > span:nth-child(2)").textContent.split("(")[1].replace(")", "").trim()
+		}
+	} catch (e) {}
+	return {};
+}
