@@ -250,5 +250,24 @@
 				".ticker-volume span"
 			]
 		}
+	},
+	{
+		"urls": [
+			"^https?:\\/\\/(\\w+\\.)?stex\\.com\\/"
+		],
+		"currency": "BTC",
+		"selectors": [
+			"#market_volume",
+			"#glass_sell_orders_list li > span.amount",
+			"#glass_buy_orders_list li > span.amount",
+			"#tab-all-trade-history ul li span:nth-child(2)"
+		],
+		"specialTriggers": {
+			"stexAdvanced": [
+				".basic-trade-list ul li.element_row .price",
+				".basic-trade-list ul li.element_row .change",
+				".basic-trade-list ul li.element_row .volume"
+			]
+		}
 	}
 ]

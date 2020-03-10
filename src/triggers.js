@@ -155,3 +155,17 @@ triggerFunctions.bitrueAdvanced2 = (e) => {
 	} catch (e) {}
 	return {};
 }
+
+/**
+ * Stex exchange currency detection
+ *
+ * @param {Element} e
+ */
+triggerFunctions.stexAdvanced = (e) => {
+	try {
+		return {
+			curr : document.querySelector(".all-pairs-tab.active").textContent.trim()
+		}
+	} catch (e) {}
+	return {};
+}

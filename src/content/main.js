@@ -247,8 +247,9 @@ function openTooltip(price, x, y, forceOpen, activeCurrencies, crypto) {
 		crypto = crypto || getWebsiteCurrency(window.location)
 	;
 
-	// debug
-	//console.log("converting " + crypto + " value")
+	// -------------------------debug--------------------------
+	//console.log("converting " + crypto + " value of " + price)
+	// -------------------------debug--------------------------
 
 	// we need to make sure we have currency data
 	if (null === data || !data.crypto || !data.crypto[crypto]) return;
@@ -257,7 +258,6 @@ function openTooltip(price, x, y, forceOpen, activeCurrencies, crypto) {
 	price *= data.crypto[crypto].quote.USD.price;
 
 	var html = '';
-	//html+="<h6>-"+crypto+"-</h6>";//for debbug
 
 	let maxFractionDigits;
 	let minFractionDigits;
