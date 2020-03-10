@@ -265,8 +265,22 @@
 		"specialTriggers": {
 			"stexAdvanced": [
 				".basic-trade-list ul li.element_row .price",
-				".basic-trade-list ul li.element_row .change",
 				".basic-trade-list ul li.element_row .volume"
+			]
+		}
+	},
+	{
+		"urls": [
+			"^https?:\\/\\/(\\w+\\.)?latoken\\.com\\/"
+		],
+		"currency": "BTC",
+		"selectors": [
+			""
+		],
+		"specialTriggers": {
+			"latokenAdvanced": [
+				"div[name='price']",
+				"div[name='usd']"
 			]
 		}
 	}

@@ -169,3 +169,17 @@ triggerFunctions.stexAdvanced = (e) => {
 	} catch (e) {}
 	return {};
 }
+
+/**
+ * LAToken exchange currency detection
+ *
+ * @param {Element} e
+ */
+triggerFunctions.latokenAdvanced = (e) => {
+	try {
+		return {
+			curr : window.location.href.split("exchange/")[1].trim()
+		}
+	} catch (e) {}
+	return {};
+}
