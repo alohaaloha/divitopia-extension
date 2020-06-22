@@ -41,3 +41,9 @@ See also the list of [contributors](https://github.com/davidrockin/divitopia-ext
 ## License
 
 No license at this moment.
+
+
+## Upload to Chrome Store
+
+1. Download extension .zip file from repository  https://github.com/alohaaloha/divitopia-extension (green 'clone or download' button)
+2. Upload .zip file to chrome store

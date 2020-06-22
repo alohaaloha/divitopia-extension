@@ -183,3 +183,17 @@ triggerFunctions.latokenAdvanced = (e) => {
 	} catch (e) {}
 	return {};
 }
+
+/**
+ * bithumb exchange currency detection
+ *
+ * @param {Element} e
+ */
+triggerFunctions.bithumbAdvanced = (e) => {
+	try {
+		return {
+			curr : document.querySelector("#main div.content-body app-basic-trade section.right-group section.symbol-plate div.ant-tabs-tab-active").textContent.trim()
+		}
+	} catch (e) {}
+	return {};
+}
