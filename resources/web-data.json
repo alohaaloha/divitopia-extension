@@ -290,7 +290,7 @@
 		],
 		"currency": "BTC",
 		"selectors": [
-			"#main section.left-group section.trade-market ul li.about-24H div:nth-child(2) div.info-box.first-i div"
+			""
 		],
 		"specialTriggers": {
 			"bithumbAdvanced": [
